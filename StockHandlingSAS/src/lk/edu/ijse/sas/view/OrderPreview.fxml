@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="300.0" prefWidth="500.0" style="-fx-border-width: 5; -fx-border-color: red;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.edu.ijse.sas.view.OrderPreviewController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="234.0" layoutX="9.0" layoutY="58.0" opacity="0.88" stroke="BLACK" strokeType="INSIDE" style="-fx-font-size: 12pt;" width="483.0">
+         <fill>
+            <RadialGradient centerX="0.5277777777777777" centerY="0.49523809523809514" focusAngle="74.05" focusDistance="0.2325581395348837" radius="0.6976744186046513">
+               <stops>
+                  <Stop color="#091beb" />
+                  <Stop color="#565b56" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Rectangle>
+      <Label alignment="TOP_CENTER" layoutX="9.0" layoutY="4.0" prefHeight="39.0" prefWidth="212.0" text="Order Preview" textFill="#0000008c">
+         <font>
+            <Font name="Yu Gothic Medium" size="30.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnBill" buttonType="RAISED" layoutX="19.0" layoutY="169.0" onAction="#BtnBillOnAction" prefHeight="25.0" prefWidth="69.0" ripplerFill="BLACK" style="-fx-background-color: #15e302;" text="Bill" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <Label alignment="TOP_CENTER" layoutX="14.0" layoutY="69.0" prefHeight="25.0" prefWidth="69.0" text="Select PO" textFill="#f6ff00">
+         <font>
+            <Font name="Yu Gothic Medium" size="15.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbPo" layoutX="102.0" layoutY="60.0" prefHeight="30.0" prefWidth="136.0" style="-fx-text-base-color: white; -fx-font-size: 10pt;" unFocusColor="#00ff26">
+         <focusColor>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="#2808f5" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </focusColor>
+      </JFXComboBox>
+      <JFXButton fx:id="btnInvoice1" buttonType="RAISED" layoutX="115.0" layoutY="169.0" onAction="#BtnInvoice1OnAction" prefHeight="37.0" prefWidth="101.0" style="-fx-background-color: white;" text="Invoice ">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnInvoice3" buttonType="RAISED" layoutX="378.0" layoutY="169.0" onAction="#BtnInvoice3OnAction" prefHeight="37.0" prefWidth="101.0" style="-fx-background-color: #4d6eaf;" text="Invoice " textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnInvoice2" buttonType="RAISED" layoutX="245.0" layoutY="169.0" onAction="#BtnInvoice2OnAction" prefHeight="37.0" prefWidth="101.0" style="-fx-background-color: #ff3738;" text="Invoice " textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnCancel" buttonType="RAISED" layoutX="387.0" layoutY="251.0" onAction="#btnCancelOnAction" prefHeight="37.0" prefWidth="101.0" style="-fx-background-color: gray;" text="CANCEL" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <Label alignment="TOP_CENTER" layoutX="266.0" layoutY="70.0" prefHeight="25.0" prefWidth="84.0" text="Select Bill" textFill="#f6ff00">
+         <font>
+            <Font name="Yu Gothic Medium" size="15.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbBill" layoutX="354.0" layoutY="65.0" prefHeight="30.0" prefWidth="136.0" style="-fx-text-base-color: white; -fx-font-size: 10pt;" unFocusColor="#00ff26">
+         <focusColor>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="#2808f5" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </focusColor>
+      </JFXComboBox>
+   </children>
+</AnchorPane>

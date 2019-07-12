@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="300.0" prefWidth="500.0" style="-fx-border-color: red; -fx-border-width: 5;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.edu.ijse.sas.view.RenameCompanyController">
+    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="236.0" layoutX="6.0" layoutY="55.0" opacity="0.88" stroke="BLACK" strokeType="INSIDE" style="-fx-font-size: 12pt;" width="487.0">
+         <fill>
+            <RadialGradient centerX="0.5277777777777777" centerY="0.49523809523809514" focusAngle="74.05" focusDistance="0.2325581395348837" radius="0.6976744186046513">
+               <stops>
+                  <Stop color="#091beb" />
+                  <Stop color="#565b56" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Rectangle>
+      <Label alignment="TOP_CENTER" layoutX="5.0" layoutY="7.0" prefHeight="39.0" prefWidth="269.0" text="Rename Company" textFill="#0000008c">
+         <font>
+            <Font name="Yu Gothic Medium" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="150.0" prefHeight="39.0" prefWidth="105.0" text="New Name" textFill="#e8d508">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtName" focusColor="#060707" layoutX="162.0" layoutY="149.0" prefHeight="33.0" prefWidth="323.0" promptText="Mention the New Name for Company" style="-fx-font-size: 10pt; -fx-text-inner-color: white;" unFocusColor="LIME" />
+      <JFXButton fx:id="btnRename" buttonType="RAISED" layoutX="277.0" layoutY="241.0" onAction="#btnRenameOnAction" prefHeight="37.0" prefWidth="88.0" ripplerFill="#f6f7f8" style="-fx-background-color: yellow; -fx-background-radius: 12;" text="RENAME">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnCancel" buttonType="RAISED" layoutX="388.0" layoutY="241.0" onAction="#btnCancelOnAction" prefHeight="38.0" prefWidth="88.0" ripplerFill="#fff8f8" style="-fx-background-color: grey; -fx-background-radius: 12;" text="CANCEL" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="13.0" layoutY="67.0" prefHeight="39.0" prefWidth="121.0" text="Company Name" textFill="#e8d508">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbCompany" focusColor="BLACK" layoutX="155.0" layoutY="66.0" onAction="#cmbCompanyOnAction" prefHeight="37.0" prefWidth="323.0" promptText="Select the company you want to Rename" style="-fx-text-base-color: white; -fx-font-size: 10pt;" unFocusColor="#00ff1a" />
+   </children>
+</AnchorPane>

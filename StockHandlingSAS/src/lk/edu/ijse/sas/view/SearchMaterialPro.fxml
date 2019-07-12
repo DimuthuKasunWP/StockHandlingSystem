@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="searchPane" prefHeight="154.0" prefWidth="282.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.edu.ijse.sas.view.SearchMaterialProController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="154.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="282.0" />
+      <JFXListView fx:id="loadList" layoutX="82.0" layoutY="43.0" prefHeight="78.0" prefWidth="194.0" visible="false" />
+      <JFXTextField fx:id="txtSearch" focusColor="#00ff0d" layoutX="14.0" layoutY="10.0" onKeyReleased="#txtSearchOnKeyReleased" prefHeight="29.0" prefWidth="266.0" promptText="Type Here" style="-fx-text-inner-color: white;" unFocusColor="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <ImageView fitHeight="67.0" fitWidth="98.0" layoutX="7.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resource/icon/chart-search.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnBack" buttonType="RAISED" layoutX="217.0" layoutY="122.0" onAction="#btnBackOnAction" prefHeight="25.0" prefWidth="56.0" ripplerFill="WHITE" style="-fx-background-color: gray;" text="BACK" />
+   </children>
+</AnchorPane>

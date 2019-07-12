@@ -1,0 +1,639 @@
+create database Stock;
+use stock;
+
+create table company(
+
+	cid varchar(10)not null,
+	com_name varchar(20)not null,
+	address_no varchar(10)not null,
+	address_lane varchar(50)not null,
+	address_area varchar(50)not null,
+	address_city varchar(50),
+	email varchar(50),
+	tel_no varchar(20) not null,
+	tel_add varchar(20),
+	fax_no varchar(20),
+	
+	constraint primary key(cid)
+
+)engine=innodb;
+
+insert into company(cid,com_name,address_no,address_lane,address_area,address_city,email,tel_no,tel_add,fax_no)
+values('C0001','Richard Pieris','No:34','JAala','Ekala','colombo','Richard Piries@gmail.com','5857383','','+9423383');
+
+
+insert into company(cid,com_name,address_no,address_lane,address_area,address_city,email,tel_no,tel_add,fax_no)
+values('C0002','Heylis','No:67','kohila pura','Narthupana','naboda','Heylis@gmail.com','+94345686','','+94123734');
+
+
+insert into company(cid,com_name,address_no,address_lane,address_area,address_city,email,tel_no,tel_add,fax_no)
+values('C0003','Dolamite','No:567','Kuranagala Road','dompe','mahanuwara','Dolamite@gmail.com','+941656','','+940023');
+
+
+insert into company(cid,com_name,address_no,address_lane,address_area,address_city,email,tel_no,tel_add,fax_no)
+values('C0004','powders','No:34','etanamadala','KalutaraNorth','Kalutara','','+9457383','','+94237383');
+
+insert into company(cid,com_name,address_no,address_lane,address_area,address_city,email,tel_no,tel_add,fax_no)
+values('C0000','no','no','no','no','no','no','no','no','no');
+
+
+
+create table purchase_order(
+
+	pid varchar(10) not null,
+	cid varchar(10) not null,
+	goodsAmount int not null,
+	vat decimal(10,2) not null,
+	svat decimal(10,2) not null,
+	discount decimal(10,2) not null,
+	grand_total decimal(10,2) not null,
+	create_date date not null,
+	confirm_date date,
+
+	constraint primary key(pid),
+	
+	constraint foreign key(cid) references company(cid)
+	on delete cascade on update cascade
+
+)engine=innodb;
+
+insert into purchase_order(pid,cid,goodsAmount,vat,svat,discount,grand_total,create_date,confirm_date)
+values('PO0001','C0001',12,2345.89,1122.88,1233,2345.89,'2016-01-02','2015-03-02');
+
+insert into purchase_order(pid,cid,goodsAmount,vat,svat,discount,grand_total,create_date,confirm_date)
+values('PO0002','C0003',3,11233.89,2344.88,26776.89,12222,'2016-01-02','2015-03-02');
+
+insert into purchase_order(pid,cid,goodsAmount,vat,svat,discount,grand_total,create_date,confirm_date)
+values('PO0003','C0002',3,5677.89,1445.90,1666.89,12222,'2016-01-02','2015-03-02');
+
+insert into purchase_order(pid,cid,goodsAmount,vat,svat,discount,grand_total,create_date,confirm_date)
+values('PO0004','C0001',12,2345.89,1122.88,1233.34,2345.89,'2017-09-01','2017-09-04');
+
+
+
+
+create table material(
+	
+	mid varchar(10) not null,
+	material_name varchar(20) not null,
+	amount_kg decimal(10,2) not null,
+
+	constraint primary key(mid)
+
+)engine=innodb;
+
+insert into material(mid,material_name,amount_kg)
+values('M0001','Ball Clay',34588.90);
+
+insert into material(mid,material_name,amount_kg)
+values('M0002','Dolamite',15675.00);
+
+insert into material(mid,material_name,amount_kg)
+values('M0003','Calcite',23455.10);
+
+
+
+
+
+create table purchase_order_detail(
+	
+	pid varchar(10) not null,
+	mid varchar(10) not null, 
+	unit varchar(5) not null,
+	qty decimal(10,2) not null,
+	unit_price decimal(10,2) not null,
+	total decimal(10,2) not null,
+
+	constraint primary key(pid,mid),
+	
+	constraint foreign key(mid) references material(mid)
+	on delete cascade on update cascade
+
+
+)engine=innodb;
+
+insert into purchase_order_detail(pid,mid,unit,qty,unit_price,total)
+values('PO0001','M0001','Kg',23456.45,1000.00,12333.90);
+
+insert into purchase_order_detail(pid,mid,unit,qty,unit_price,total)
+values('PO0001','M0002','Kg',23456.45,1233.00,18843.90);
+
+insert into purchase_order_detail(pid,mid,unit,qty,unit_price,total)
+values('PO0002','M0001','Kg',23456.45,1012.00,67533.90);
+
+insert into purchase_order_detail(pid,mid,unit,qty,unit_price,total)
+values('PO0001','M0003','Kg',23456.45,1000.00,12333.90);
+
+
+
+
+create table grn(
+	grid varchar(10) not null,
+	cid varchar(10) not null,
+	pid varchar(10),
+	good_amount int not null,
+	add_time time not null,
+	grn_date date not null,
+	grand_total decimal(10,2) not null,
+
+	constraint primary key(grid),
+	
+	constraint foreign key(cid) references company(cid)
+	on delete cascade on update cascade,
+	
+	constraint foreign key(pid) references purchase_order(pid)
+	on delete cascade on update cascade
+
+
+)engine=innodb;
+
+insert into grn(grid,cid,pid,good_amount,add_time,grn_date,grand_total)
+values('GR0001','C0002','PO0001',12,'09:17:56','2017-06-23',12345.90);
+
+
+insert into grn(grid,cid,pid,good_amount,add_time,grn_date,grand_total)
+values('GR0002','C0002','PO0002',13,'23:13:56','2017-04-28',12166.10);
+
+
+insert into grn(grid,cid,pid,good_amount,add_time,grn_date,grand_total)
+values('GR0003','C0002','PO0003',2,'15:13:56','2017-09-11',11665.90);
+
+
+insert into grn(grid,cid,pid,good_amount,add_time,grn_date,grand_total)
+values('GR0004','C0001','PO0002',10,'02:13:56','2017-02-07',12345.90);
+
+
+
+create table batch_receive(
+	
+	brid varchar(10) not null,
+	grid varchar(10) not null,
+	mid varchar(10) not null,
+	manufacture_date date,
+	expire_date date,
+	received_qty_kg decimal(10,2) not null,
+	current_qty_kg decimal(10,2) not null,
+	unit_price_1kg decimal(10,2) not null,
+	total decimal(10,2) not null,
+
+	constraint primary key(brid),
+
+	constraint foreign key(grid) references grn(grid)
+	on delete cascade on update cascade ,
+
+	constraint foreign key(mid) references material(mid)
+	on delete cascade on update cascade 
+
+)engine=innodb;
+
+insert into batch_receive(brid,grid,mid,manufacture_date,expire_date,received_qty_kg,current_qty_kg,unit_price_1kg,total)
+values('BR0004','GR0001','M0001','2017-03-01','2018-05-01',3277.89,3444.11,234.90,4567.00);
+
+insert into batch_receive(brid,grid,mid,manufacture_date,expire_date,received_qty_kg,current_qty_kg,unit_price_1kg,total)
+values('BR0003','GR0001','M0002','2017-02-01','2018-09-01',10099.12,1278.67,145.50,12344.50);
+
+insert into batch_receive(brid,grid,mid,manufacture_date,expire_date,received_qty_kg,current_qty_kg,unit_price_1kg,total)
+values('BR0002','GR0002','M0003','2017-12-01','2018-09-01',14488.78,2233.88,4567.98,4567.0);
+
+insert into batch_receive(brid,grid,mid,manufacture_date,expire_date,received_qty_kg,current_qty_kg,unit_price_1kg,total)
+values('BR0001','GR0003','M0001','2017-09-01','2018-09-01',12334.89,1022.34,1567.90,342342.00);
+
+
+
+
+
+create table return_batch_receive(
+
+	rbrid varchar(10) not null,
+	grid varchar(10) not null,
+	mid varchar(10) not null,
+	manufacture_date date ,
+	expire_date date,
+	returned_qty_kg decimal(10,2) not null,
+	current_qty_kg decimal(10,2) not null,
+	unit_price_1kg decimal(10,2) not null,
+	total decimal(10,2) not null,
+
+	constraint primary key(rbrid),
+
+	constraint foreign key(grid) references grn(grid)
+	on delete cascade on update cascade ,
+
+	constraint foreign key(mid) references material(mid)
+	on delete cascade on update cascade 
+
+
+)engine=innodb;
+
+insert into return_batch_receive(rbrid,grid,mid,manufacture_date,expire_date,returned_qty_kg,current_qty_kg,unit_price_1kg,total)
+values('RBR0001','GR0001','M0001','2017-03-01','2018-09-01',15567.45,12334.78,234.90,4567.00);
+
+insert into return_batch_receive(rbrid,grid,mid,manufacture_date,expire_date,returned_qty_kg,current_qty_kg,unit_price_1kg,total)
+values('RBR0002','GR0002','M0002','2017-09-01','2018-06-01',4566.12,2234.45,234.90,4567.00);
+
+insert into return_batch_receive(rbrid,grid,mid,manufacture_date,expire_date,returned_qty_kg,current_qty_kg,unit_price_1kg,total)
+values('RBR0003','GR0001','M0003','2017-04-01','2018-09-01',1998.78,1244.13,234.90,4567.00);
+
+insert into return_batch_receive(rbrid,grid,mid,manufacture_date,expire_date,returned_qty_kg,current_qty_kg,unit_price_1kg,total)
+values('RBR0004','GR0003','M0001','2017-10-01','2018-09-01',3455.89,1223.67,234.90,4567.00);
+
+
+
+
+
+create table remove_receive_material(
+	
+	mid varchar(10) not null,
+	brid varchar(10) not null,
+	qty_Kg decimal(10,2) not null,
+	remove_date date not null,
+	remove_time varchar(10) not null,
+	carry_sector_name varchar(200),
+	
+	constraint primary key(mid,brid,remove_date,remove_time),
+	
+	constraint foreign key(mid) references material(mid)
+	on delete cascade on update cascade,
+	
+	constraint foreign key(brid) references batch_receive(brid)
+	on delete cascade on update cascade
+
+)engine=innodb;
+
+insert into remove_receive_material(mid,brid,qty_Kg,remove_date,remove_time,carry_sector_name)
+values('M0001','BR0003',11886.78,'2017-08-10','10:08:43','Nishan');
+
+insert into remove_receive_material(mid,brid,qty_Kg,remove_date,remove_time,carry_sector_name)
+values('M0002','BR0001',16776.78,'2017-08-10','23:03:43','Kamal');
+
+insert into remove_receive_material(mid,brid,qty_Kg,remove_date,remove_time,carry_sector_name)
+values('M0001','BR0002',1456.78,'2017-08-14','02:08:43','Sugath');
+
+insert into remove_receive_material(mid,brid,qty_Kg,remove_date,remove_time,carry_sector_name)
+values('M0003','BR0003',1233.78,'2017-08-30','19:10:43','Nishan');
+
+
+
+
+
+create table remove_return_material(
+	
+	mid varchar(10) not null,
+	rbrid varchar(10) not null,
+	qty_Kg decimal(10,2) not null,
+	remove_date date not null,
+	remove_time varchar(10) not null,
+	carry_sector_name varchar(200),
+	
+	constraint primary key(mid,rbrid,remove_date,remove_time),
+	
+	constraint foreign key(mid) references material(mid)
+	on delete cascade on update cascade,
+	
+	constraint foreign key(rbrid) references return_batch_receive(rbrid)
+	on delete cascade on update cascade
+
+)engine=innodb;
+
+insert into remove_return_material(mid,rbrid,qty_Kg,remove_date,remove_time,carry_sector_name)
+values('M0001','RBR0001',2445.78,'2017-08-10','10:08:43','Nishan');
+
+insert into remove_return_material(mid,rbrid,qty_Kg,remove_date,remove_time,carry_sector_name)
+values('M0002','RBR0003',1233.54,'2017-08-10','23:03:43','Kamal');
+
+insert into remove_return_material(mid,rbrid,qty_Kg,remove_date,remove_time,carry_sector_name)
+values('M0001','RBR0003',1877.13,'2017-08-14','02:08:43','Sugath');
+
+insert into remove_return_material(mid,rbrid,qty_Kg,remove_date,remove_time,carry_sector_name)
+values('M0003','RBR0002',1445.34,'2017-08-30','19:10:43','Nishan');
+
+
+
+
+
+
+
+
+create table reject_receive(
+
+	brid varchar(10) not null,
+	qty decimal(10,2) not null,
+	cause varchar(500) ,
+	reject_date date not null,
+	
+	constraint primary key(brid,reject_date),
+	
+	constraint foreign key(brid) references 	batch_receive(brid)
+	on delete cascade on update cascade
+
+)engine=innodb;
+
+insert into reject_receive(brid,qty,cause,reject_date)
+values('BR0001',12,'the stock expired','2017-09-02');
+
+insert into reject_receive(brid,qty,cause,reject_date)
+values('BR0001',13,'the stock have not correct weight','2017-10-02');
+
+insert into reject_receive(brid,qty,cause,reject_date)
+values('BR0002',10,'stock expired','2017-11-02');
+
+
+
+
+create table reject_return_receive(
+
+	rbrid varchar(10) not null,
+	qty decimal(10,2) not null,
+	cause varchar(500) ,
+	reject_date date not null,
+	
+	constraint primary key(rbrid,reject_date),
+	
+	constraint foreign key(rbrid) references 	return_batch_receive(rbrid)
+	on delete cascade on update cascade
+
+)engine=innodb;
+
+insert into reject_return_receive(rbrid,qty,cause,reject_date)
+values('RBR0001',12,'stock expired','2017-09-02');
+
+insert into reject_return_receive(rbrid,qty,cause,reject_date)
+values('RBR0001',13,'stock expired','2017-10-02');
+
+insert into reject_return_receive(rbrid,qty,cause,reject_date)
+values('RBR0002',10,'stock expired','2017-11-02');
+
+
+
+
+create table product(
+
+	proid varchar(10)not null,
+	product_name varchar(20) not null,
+	bag_size_kg decimal(10,2) not null,
+	product_qty_bags int not null,
+
+	constraint primary key(proid)	
+)engine=innodb;
+
+insert into product(proid,product_name,bag_size_kg,product_qty_bags)
+values('PRO0001','Kaolin(300)_KG20',20,589);
+
+insert into product(proid,product_name,bag_size_kg,product_qty_bags)
+values('PRO0002','Kaolin(300)_KG25',25,612);
+
+insert into product(proid,product_name,bag_size_kg,product_qty_bags)
+values('PRO0003','Kaolin(300)_KG40',40,235);
+
+insert into product(proid,product_name,bag_size_kg,product_qty_bags)
+values('PRO0004','Kaolin(300)_KG50',50,367);
+
+insert into product(proid,product_name,bag_size_kg,product_qty_bags)
+values('PRO0005','Kaolin(400)_KG20',20,351);
+
+
+
+
+create table batch_add(
+	
+	baid varchar(10) not null,
+	proid varchar(10) not null,
+	manufacture_date date,
+	expire_date date,
+	product_qty int not null,
+	current_qty int not null,
+	unit_price decimal(10,2) not null,
+	add_time time,
+	add_date date,
+
+	constraint primary key(baid),
+
+	constraint foreign key(proid) references product(proid)
+	on delete cascade on update cascade	
+
+)engine=innodb;
+
+insert into batch_add(baid,proid,manufacture_date,expire_date,product_qty,current_qty,unit_price,add_time,add_date)
+values('BA0001','PRO0001','2017-08-09','2019-09-08',400,355,134.90,'09:18:12','2017-04-03');
+
+insert into batch_add(baid,proid,manufacture_date,expire_date,product_qty,current_qty,unit_price,add_time,add_date)
+values('BA0002','PRO0001','2017-08-09','2019-09-08',245,212,123.77,'09:18:12','2017-04-03');
+
+insert into batch_add(baid,proid,manufacture_date,expire_date,product_qty,current_qty,unit_price,add_time,add_date)
+values('BA0003','PRO0002','2017-08-09','2019-09-08',567,432,345.34,'09:18:12','2017-04-03');
+
+insert into batch_add(baid,proid,manufacture_date,expire_date,product_qty,current_qty,unit_price,add_time,add_date)
+values('BA0004','PRO0003','2017-08-09','2019-09-08',231,200,786.88,'09:18:12','2017-04-03');
+
+
+
+create table orders(
+
+	oid varchar(10) not null,
+	cid varchar(10) not null,
+	po varchar(50) not null,
+	total decimal(10,2) not null,
+	order_date date not null,
+
+	constraint primary key(oid),
+	
+	constraint foreign key(cid) references company(cid)
+	on update cascade on delete cascade
+		
+
+)engine=innodb;
+
+insert into orders(oid,cid,po,total,order_date)
+values('OD0001','C0001','PHO0045',2333.22,'2017-08-06');
+
+insert into orders(oid,cid,po,total,order_date)
+values('OD0002','C0003','PPO0018',1223.22,'2017-01-02');
+
+insert into orders(oid,cid,po,total,order_date)
+values('OD0003','C0004','PRBO0015',3444.33,'2017-11-07');
+
+insert into orders(oid,cid,po,total,order_date)
+values('OD0004','C0004','PK0021',1556.88,'2017-10-26');
+
+
+
+
+create table product_order(
+
+	oid varchar(10) not null,
+	baid varchar(10) not null,
+	packages int not null,
+	qty_kg decimal(10,2) not null,
+	unit_price_1Bag decimal(10,2) not null,
+	total decimal(10,2) not null,
+
+	constraint primary key(oid,baid),
+
+	constraint foreign key(oid) references orders(oid)
+	on update cascade on delete cascade,
+
+	constraint foreign key(baid) references batch_add(baid)
+	on update cascade on delete cascade
+	
+	
+)engine=innodb;
+
+insert into product_order(oid,baid,packages,qty_kg,unit_price_1Bag,total)
+values('OD0001','BA0001',12,200,1234.00,3455.00);
+
+insert into product_order(oid,baid,packages,qty_kg,unit_price_1Bag,total)
+values('OD0001','BA0003',25,340,1234.00,3455.00);
+
+insert into product_order(oid,baid,packages,qty_kg,unit_price_1Bag,total)
+values('OD0002','BA0002',150,600,789.00,1546.00);
+
+insert into product_order(oid,baid,packages,qty_kg,unit_price_1Bag,total)
+values('OD0001','BA0002',45,250,1567.00,3889.00);
+
+
+
+
+create table reject_order(
+	
+	rjid varchar(10) not null,
+	reject_amount int not null,
+	reject_date date not null,
+
+	constraint primary key(rjid)
+
+)engine=innodb;
+
+insert into reject_order(rjid,reject_amount,reject_date)
+values('RJ0001',19,'2017-03-09');
+
+insert into reject_order(rjid,reject_amount,reject_date)
+values('RJ0002',20,'2017-01-09');
+
+
+insert into reject_order(rjid,reject_amount,reject_date)
+values('RJ0003',3,'2017-09-30');
+
+
+insert into reject_order(rjid,reject_amount,reject_date)
+values('RJ0004',14,'2017-03-23');
+
+
+
+
+create table reject_order_detail(
+	
+	rjid varchar(10) not null,
+	baid varchar(10) not null,
+	oid varchar(20) not null,
+	qty int not null,
+
+	constraint primary key(oid,baid,rjid),
+	
+	constraint foreign key(baid) references batch_add(baid)
+	on delete cascade on update cascade,
+
+	constraint foreign key(rjid) references reject_order(rjid)
+	on delete cascade on update cascade,
+
+	constraint foreign key(oid) references orders(oid)
+	on delete cascade on update cascade	
+
+)engine=innodb;
+
+insert into reject_order_detail(rjid,oid,baid,qty)
+values('RJ0001','OD0001','BA0001',23);
+
+insert into reject_order_detail(rjid,oid,baid,qty)
+values('RJ0001','OD0001','BA0002',13);
+
+insert into reject_order_detail(rjid,oid,baid,qty)
+values('RJ0001','OD0002','BA0003',15);
+
+insert into reject_order_detail(rjid,oid,baid,qty)
+values('RJ0002','OD0003','BA0003',17);
+
+
+
+
+
+create table return_order(
+
+	rnid varchar(10) not null,
+	returned_amount int not null,
+	return_date date not null,
+	
+	constraint primary key(rnid)
+
+)engine=innodb;
+
+insert into return_order(rnid,returned_amount,return_date)
+values('RN0001',13,'2016-09-07');
+
+insert into return_order(rnid,returned_amount,return_date)
+values('RN0002',2,'2016-10-07');
+
+insert into return_order(rnid,returned_amount,return_date)
+values('RN0003',12,'2016-03-02');
+
+insert into return_order(rnid,returned_amount,return_date)
+values('RN0004',15,'2016-09-01');
+
+
+
+
+create table return_order_detail(
+	
+	rnid varchar(10) not null,
+	baid varchar(10) not null,
+	oid varchar(10) not null,
+	qty int not null,
+
+	constraint primary key(oid,baid,rnid),
+	
+	constraint foreign key(baid) references batch_add(baid)
+	on delete cascade on update cascade,
+
+	constraint foreign key(rnid) references return_order(rnid)
+	on delete cascade on update cascade,
+
+	constraint foreign key(oid) references orders(oid)
+	on delete cascade on update cascade	
+
+)engine=innodb;
+
+insert into return_order_detail(rnid,oid,baid,qty)
+values('RN0001','OD0001','BA0001',53);
+
+insert into return_order_detail(rnid,oid,baid,qty)
+values('RN0002','OD0001','BA0002',23);
+
+insert into return_order_detail(rnid,oid,baid,qty)
+values('RN0003','OD0002','BA0001',22);
+
+insert into return_order_detail(rnid,oid,baid,qty)
+values('RN0004','OD0003','BA0002',11);
+
+
+
+create table password(
+	
+	user_name varchar(20),
+	password varchar(20),
+	
+	constraint primary key(user_name,password)
+
+)engine=innodb;
+
+insert into password(user_name,password)
+values('Admin','0000');
+
+create table sector(
+
+	sec_name varchar(50)
+
+)engine=innodb;
+
+insert into sector(sec_name)
+values('Kamal');
+insert into sector(sec_name)
+values('Nishantha');

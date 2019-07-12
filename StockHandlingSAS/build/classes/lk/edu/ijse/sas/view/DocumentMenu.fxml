@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="300.0" style="-fx-background-color: #42426F;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.edu.ijse.sas.view.DocumentMenuController">
+   <children>
+      <Label layoutX="9.0" layoutY="-4.0" prefHeight="46.0" prefWidth="282.0" text="Documents Menu">
+         <font>
+            <Font name="Segoe Print" size="25.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.4777777777777778" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#d70b0b" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <effect>
+            <DropShadow radius="8.5175" spread="0.2" width="15.07" />
+         </effect>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="553.0" layoutX="6.0" layoutY="75.0" opacity="0.66" stroke="BLACK" strokeType="INSIDE" style="-fx-background-radius: 30;" width="288.0">
+         <fill>
+            <RadialGradient centerX="0.4388888888888889" centerY="0.5" radius="0.5813953488372093">
+               <stops>
+                  <Stop color="#031401" />
+                  <Stop color="#031401" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Rectangle>
+      <Label fx:id="lblBill" layoutX="144.0" layoutY="114.0" onMouseClicked="#lblBillOnClicked" prefHeight="46.0" prefWidth="79.0" text="Bill">
+         <textFill>
+            <RadialGradient centerX="0.5055555555555555" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#ecf2ec" />
+                  <Stop color="#d1a108" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnBack" buttonType="RAISED" layoutX="10.0" layoutY="653.0" onAction="#btnBackOnAction" prefHeight="36.0" prefWidth="98.0" ripplerFill="BLACK" style="-fx-background-color: gray;" text="Back">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="79.0" fitWidth="98.0" layoutX="14.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resource/icon/bill.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="79.0" fitWidth="98.0" layoutX="20.0" layoutY="259.0" pickOnBounds="true">
+         <image>
+            <Image url="@../resource/icon/invoices-icon-5.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblInvoice" layoutX="144.0" layoutY="261.0" onMouseClicked="#lblInvoiceClicked" prefHeight="46.0" prefWidth="108.0" text="Invoice">
+         <textFill>
+            <RadialGradient centerX="0.5055555555555555" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#ecf2ec" />
+                  <Stop color="#d1a108" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="79.0" fitWidth="98.0" layoutX="21.0" layoutY="417.0" pickOnBounds="true">
+         <image>
+            <Image url="@../resource/icon/Billing-Assistance-300x300.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblTax" layoutX="144.0" layoutY="417.0" onMouseClicked="#lblTaxOnClicked" prefHeight="46.0" prefWidth="115.0" text="Tax Invoice">
+         <textFill>
+            <RadialGradient centerX="0.5055555555555555" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#ecf2ec" />
+                  <Stop color="#d1a108" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

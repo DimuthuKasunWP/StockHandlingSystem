@@ -1,0 +1,23 @@
+libs.CopyLibs.classpath=\
+    ${base}/CopyLibs/org-netbeans-modules-java-j2seproject-copylibstask.jar
+libs.CopyLibs.displayName=CopyLibs Task
+libs.CopyLibs.prop-version=2.0
+libs.Jasper_Reports.classpath=\
+    ${base}/Jasper_Reports/commons-beanutils-1.9.3.jar;\
+    ${base}/Jasper_Reports/commons-collections-3.2.2-javadoc.jar;\
+    ${base}/Jasper_Reports/commons-collections-3.2.2.jar;\
+    ${base}/Jasper_Reports/commons-digester-2.1.jar;\
+    ${base}/Jasper_Reports/commons-digester3-3.2.jar;\
+    ${base}/Jasper_Reports/commons-javaflow-1590792.jar;\
+    ${base}/Jasper_Reports/commons-logging-1.2.jar;\
+    ${base}/Jasper_Reports/jasperreports-6.3.1.jar;\
+    ${base}/Jasper_Reports/jasperreports-fonts-6.3.1.jar;\
+    ${base}/Jasper_Reports/jasperreports-javaflow-6.3.1.jar
+libs.junit_4.classpath=\
+    ${base}/junit_4/junit-4.12.jar
+libs.junit_4.displayName=JUnit 4.12
+libs.junit_4.javadoc=\
+    ${base}/junit_4/junit-4.12-javadoc.jar
+libs.junit_4.prop-maven-dependencies=junit:junit:4.12:jar
+libs.junit_4.src=\
+    ${base}/junit_4/junit-4.12-sources.jar

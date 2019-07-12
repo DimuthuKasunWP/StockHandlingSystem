@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="clickPane" prefHeight="150.0" prefWidth="282.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.edu.ijse.sas.view.AllSearchController">
+   <children>
+      <Label prefHeight="46.0" prefWidth="282.0" text="    Whats Wrong? Hard To Find Some Thing..." textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnPro" buttonType="RAISED" layoutX="10.0" layoutY="95.0" onAction="#btnProOnAction" prefHeight="36.0" prefWidth="78.0" style="-fx-background-color: red;" text="Production" textFill="WHITE" />
+      <Label layoutX="30.0" layoutY="39.0" prefHeight="36.0" prefWidth="98.0" text="Click Here..." textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="108.0" layoutY="34.0" prefHeight="46.0" prefWidth="178.0" text="And Type Your Own Words" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnCom" buttonType="RAISED" layoutX="104.0" layoutY="95.0" onAction="#btnComOnAction" prefHeight="36.0" prefWidth="78.0" style="-fx-background-color: red;" text="Company" textFill="WHITE" />
+      <JFXButton fx:id="btnMat" buttonType="RAISED" layoutX="198.0" layoutY="96.0" onAction="#btnMatOnAction" prefHeight="36.0" prefWidth="78.0" style="-fx-background-color: red;" text="Material" textFill="WHITE" />
+   </children>
+</AnchorPane>

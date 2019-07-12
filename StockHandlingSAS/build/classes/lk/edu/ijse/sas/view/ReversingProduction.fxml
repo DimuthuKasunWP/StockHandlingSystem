@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="660.0" prefWidth="680.0" style="-fx-border-color: #908fa8; -fx-border-width: 5;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.edu.ijse.sas.view.ReversingProductionController">
+  <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="596.0" layoutX="6.0" layoutY="58.0" opacity="0.88" stroke="BLACK" strokeType="INSIDE" style="-fx-font-size: 12pt;" width="668.0">
+         <fill>
+            <RadialGradient centerX="0.5277777777777777" centerY="0.49523809523809514" focusAngle="74.05" focusDistance="0.2325581395348837" radius="0.6976744186046513">
+               <stops>
+                  <Stop color="#091beb" />
+                  <Stop color="#565b56" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Rectangle>
+      <Label alignment="TOP_CENTER" layoutX="4.0" layoutY="4.0" prefHeight="39.0" prefWidth="296.0" text="Reversing Production" textFill="#0000008c">
+         <font>
+            <Font name="Yu Gothic Medium" size="30.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtQuantity" focusColor="BLACK" layoutX="176.0" layoutY="207.0" onAction="#txtQuantityOnAction" onKeyReleased="#txtQtyOnKeyReleased" prefHeight="33.0" prefWidth="204.0" promptText="Bags Quantity" style="-fx-font-size: 10pt; -fx-text-inner-color: white;" unFocusColor="#3ae309" />
+      <Label layoutX="24.0" layoutY="70.0" prefHeight="33.0" prefWidth="134.0" text="Production Name" textFill="#d3e10b">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtOrder" editable="false" layoutX="552.0" layoutY="18.0" prefHeight="31.0" prefWidth="120.0" promptText="Order No for PO" style="-fx-font-size: 10pt;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Label layoutX="487.0" layoutY="14.0" prefHeight="39.0" prefWidth="63.0" text="Order No">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="208.0" prefHeight="31.0" prefWidth="120.0" text="Packages(Bags)" textFill="#d3e10b">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtUnitPrice" focusColor="BLACK" layoutX="176.0" layoutY="247.0" onAction="#txtUnitPriceOnAction" onKeyReleased="#txtUnitPriceOnKeyReleased" prefHeight="33.0" prefWidth="204.0" promptText="Price" style="-fx-font-size: 10pt; -fx-text-inner-color: white;" unFocusColor="#3ae309" />
+      <Label layoutX="24.0" layoutY="253.0" prefHeight="31.0" prefWidth="120.0" text="Unit Price(1Bag)" textFill="#d3e10b">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtTotalPrice" editable="false" layoutX="175.0" layoutY="300.0" prefHeight="31.0" prefWidth="204.0" promptText="Total Price" style="-fx-font-size: 10pt;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Label layoutX="25.0" layoutY="295.0" prefHeight="30.0" prefWidth="120.0" text="Total" textFill="#d3e10b">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="599.0" prefHeight="43.0" prefWidth="120.0" text="Company Name" textFill="#d3e10b">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="506.0" prefHeight="43.0" prefWidth="120.0" text="Date" textFill="#d3e10b">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <JFXDatePicker fx:id="dtReverse" layoutX="175.0" layoutY="511.0" prefHeight="33.0" prefWidth="260.0" promptText="Select Production Reversed Date" style="-fx-font-size: 10pt; -fx-text-inner-color: white;">
+         <defaultColor>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#091beb" />
+                  <Stop color="#e1e0d7" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </defaultColor>
+      </JFXDatePicker>
+      <TextField fx:id="txtGoodsAmount" editable="false" layoutX="175.0" layoutY="562.0" prefHeight="31.0" prefWidth="112.0" promptText="Items " style="-fx-font-size: 10pt;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Label layoutX="24.0" layoutY="559.0" prefHeight="33.0" prefWidth="120.0" text="Goods Amount" textFill="#d3e10b">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblReverse" layoutX="12.0" layoutY="339.0" onMouseClicked="#rowOnClicked" prefHeight="164.0" prefWidth="657.0" stylesheets="@Tables.css">
+        <columns>
+          <TableColumn fx:id="colName" prefWidth="75.0" text="Production Name" />
+          <TableColumn fx:id="colBatch" prefWidth="75.0" text="Batch ID" />
+            <TableColumn fx:id="colQty" prefWidth="75.0" text="Packages(Bags)" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="75.0" text="Unit Price" />
+            <TableColumn fx:id="colTotal" prefWidth="75.0" text="Total" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Label layoutX="408.0" layoutY="110.0" prefHeight="39.0" prefWidth="77.0" text="Batch ID" textFill="#d3e10b">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnReverse" buttonType="RAISED" layoutX="579.0" layoutY="610.0" onAction="#ReverseBtnOnAction" prefHeight="39.0" prefWidth="88.0" ripplerFill="#f4f8f4d9" style="-fx-background-color: blue; -fx-background-radius: 12;" text="REVERSE">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.49444444444444446" centerY="0.7857142857142857" radius="0.5">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill></JFXButton>
+      <TextField fx:id="txtBatchQty" editable="false" layoutX="518.0" layoutY="270.0" prefHeight="31.0" prefWidth="145.0" style="-fx-text-inner-color: black; -fx-font-size: 10pt;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Label layoutX="519.0" layoutY="242.0" prefHeight="23.0" prefWidth="77.0" text=" Quantity of" textFill="#0bcfe0">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="118.0" prefHeight="31.0" prefWidth="134.0" text="Manufacture Date" textFill="#d3e10b">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="161.0" prefHeight="31.0" prefWidth="134.0" text="Expire Date" textFill="#d3e10b">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbBatch" focusColor="BLACK" layoutX="485.0" layoutY="110.0" onAction="#cmbBatchOnAction" prefHeight="25.0" prefWidth="169.0" promptText="Select A Batch" style="-fx-font-size: 10pt; -fx-text-base-color: white;" unFocusColor="#15e302" />
+      <JFXButton fx:id="btnRemove" buttonType="RAISED" layoutX="590.0" layoutY="310.0" onAction="#removeBtnOnAction" prefHeight="25.0" prefWidth="77.0" ripplerFill="WHITE" style="-fx-background-color: red;" text="REMOVE" textFill="WHITE" />
+      <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="498.0" layoutY="310.0" onAction="#updateBtnOnAction" prefHeight="25.0" prefWidth="77.0" ripplerFill="WHITE" style="-fx-background-color: #15e302;" text="UPDATE" textFill="WHITE" />
+      <TextField fx:id="txtTotalQty" editable="false" layoutX="518.0" layoutY="209.0" prefHeight="31.0" prefWidth="145.0" style="-fx-text-inner-color: black; -fx-font-size: 10pt;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Label fx:id="lblProName" layoutX="548.0" layoutY="182.0" prefHeight="23.0" prefWidth="112.0" textFill="#0bcfe0">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="550.0" layoutY="153.0" prefHeight="33.0" prefWidth="112.0" text="Total Quantity" textFill="#d3e10b">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnCancel" buttonType="RAISED" layoutX="406.0" layoutY="310.0" onAction="#cancelBtnOnAction" prefHeight="25.0" prefWidth="77.0" ripplerFill="WHITE" style="-fx-background-color: gray;" text="CANCEL" textFill="WHITE" />
+      <JFXButton fx:id="btnClear" buttonType="RAISED" layoutX="578.0" layoutY="558.0" onAction="#btnClearOnAction" prefHeight="39.0" prefWidth="88.0" ripplerFill="#f4f8f4d9" style="-fx-background-color: white; -fx-background-radius: 12;" text="CLEAR">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="lblTotalBags" layoutX="620.0" layoutY="215.0" text="Bags" visible="false">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblBatchBags" layoutX="622.0" layoutY="275.0" text="Bags" visible="false">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblBatchId" layoutX="593.0" layoutY="242.0" prefHeight="23.0" prefWidth="69.0" textFill="#0bcfe0">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="326.0" layoutY="14.0" prefHeight="39.0" prefWidth="32.0" text="PO">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnUndo" buttonType="RAISED" layoutX="591.0" layoutY="506.0" onAction="#btnUndoOnAction" prefHeight="25.0" prefWidth="77.0" ripplerFill="WHITE" style="-fx-background-color: #15e302;" text="UNDO" textFill="WHITE" />
+      <TextField fx:id="txtMfd" editable="false" layoutX="175.0" layoutY="120.0" prefHeight="31.0" prefWidth="145.0" promptText="MFD" style="-fx-text-inner-color: black; -fx-font-size: 10pt;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtExp" editable="false" layoutX="175.0" layoutY="166.0" prefHeight="31.0" prefWidth="145.0" promptText="EXP" style="-fx-text-inner-color: black; -fx-font-size: 10pt;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <JFXComboBox fx:id="cmbPO" focusColor="#120680" layoutX="354.0" layoutY="12.0" onAction="#cmbPoOnAction" prefHeight="30.0" prefWidth="120.0" promptText="Select PO" style="-fx-font-size: 10pt; -fx-text-base-color: black;" unFocusColor="BLACK" />
+      <TextField fx:id="txtCompany" editable="false" layoutX="175.0" layoutY="605.0" prefHeight="31.0" prefWidth="204.0" promptText="Reversed Company" style="-fx-font-size: 10pt;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtReturnOrderNo" editable="false" layoutX="550.0" layoutY="62.0" prefHeight="31.0" prefWidth="120.0" promptText="RNID" style="-fx-font-size: 10pt;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Label layoutX="406.0" layoutY="58.0" prefHeight="39.0" prefWidth="112.0" text="Return Order No" textFill="#d3e10b">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtProduct" editable="false" layoutX="175.0" layoutY="73.0" prefHeight="31.0" prefWidth="204.0" promptText="Product Name" style="-fx-text-inner-color: black; -fx-font-size: 10pt;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <JFXButton fx:id="btnCal" buttonType="RAISED" layoutX="400.0" layoutY="227.0" onAction="#btnCalOnAction" prefHeight="31.0" prefWidth="70.0" style="-fx-background-radius: 60; -fx-background-color: purple;" text="Calculator" textFill="WHITE" />
+   </children>  
+</AnchorPane>

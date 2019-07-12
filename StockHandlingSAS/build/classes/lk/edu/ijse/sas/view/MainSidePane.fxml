@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="300.0" style="-fx-background-color: #42426F;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="lk.edu.ijse.sas.view.MainSidePaneController">
+    <children>
+      <Label layoutX="9.0" layoutY="-4.0" prefHeight="46.0" prefWidth="282.0" text="Whats On Your Mind?">
+         <font>
+            <Font name="Segoe Print" size="25.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.4777777777777778" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#d70b0b" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <effect>
+            <DropShadow radius="8.5175" spread="0.2" width="15.07" />
+         </effect>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="657.0" layoutX="6.0" layoutY="38.0" opacity="0.18" stroke="BLACK" strokeType="INSIDE" style="-fx-background-radius: 30;" width="288.0">
+         <fill>
+            <RadialGradient centerX="0.5055555555555555" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#1fd411" />
+                  <Stop color="#d1a108" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle fx:id="rectMat" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="191.0" layoutX="9.0" layoutY="48.0" opacity="0.12" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: ;" width="275.0" />
+      <Rectangle fx:id="rectProduct" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="144.0" layoutX="10.0" layoutY="249.0" opacity="0.12" stroke="BLACK" strokeType="INSIDE" width="275.0" />
+      <Rectangle fx:id="rectOrders" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="92.0" layoutX="9.0" layoutY="402.0" opacity="0.12" stroke="BLACK" strokeType="INSIDE" width="275.0" />
+      <Rectangle fx:id="rectReport" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="92.0" layoutX="10.0" layoutY="503.0" opacity="0.12" stroke="BLACK" strokeType="INSIDE" width="275.0" />
+      <Rectangle fx:id="rectSearch" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="37.0" layoutX="9.0" layoutY="604.0" opacity="0.12" stroke="BLACK" strokeType="INSIDE" width="275.0" />
+      <Rectangle fx:id="rectDocument" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="37.0" layoutX="10.0" layoutY="650.0" opacity="0.12" stroke="BLACK" strokeType="INSIDE" width="275.0" />
+      <Label layoutX="21.0" layoutY="52.0" prefHeight="28.0" prefWidth="92.0" text="Buy Materials">
+         <textFill>
+            <RadialGradient centerX="0.5055555555555555" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#ecf2ec" />
+                  <Stop color="#d1a108" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="128.0" prefHeight="28.0" prefWidth="198.0" text="Remove Materials from Stock">
+         <textFill>
+            <RadialGradient centerX="0.5055555555555555" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#ecf2ec" />
+                  <Stop color="#d1a108" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="202.0" prefHeight="28.0" prefWidth="190.0" text="View Current Material Stock">
+         <textFill>
+            <RadialGradient centerX="0.5055555555555555" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#ecf2ec" />
+                  <Stop color="#d1a108" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="165.0" prefHeight="28.0" prefWidth="183.0" text="Reject Materials from Stock">
+         <textFill>
+            <RadialGradient centerX="0.5055555555555555" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#ecf2ec" />
+                  <Stop color="#d1a108" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="89.0" prefHeight="28.0" prefWidth="169.0" text="Update bought Materials">
+         <textFill>
+            <RadialGradient centerX="0.5055555555555555" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#ecf2ec" />
+                  <Stop color="#d1a108" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="258.0" prefHeight="28.0" prefWidth="169.0" text="Add Productions to Stock">
+         <textFill>
+            <RadialGradient centerX="0.5055555555555555" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#ecf2ec" />
+                  <Stop color="#d1a108" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="353.0" prefHeight="28.0" prefWidth="206.0" text="View Current Production Stock">
+         <textFill>
+            <RadialGradient centerX="0.5055555555555555" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#ecf2ec" />
+                  <Stop color="#d1a108" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="307.0" prefHeight="28.0" prefWidth="123.0" text="Order Productions">
+         <textFill>
+            <RadialGradient centerX="0.5055555555555555" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#ecf2ec" />
+                  <Stop color="#d1a108" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="508.0" prefHeight="28.0" prefWidth="183.0" text="Report About the Materials">
+         <textFill>
+            <RadialGradient centerX="0.5055555555555555" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#ecf2ec" />
+                  <Stop color="#d1a108" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="553.0" prefHeight="28.0" prefWidth="206.0" text="Report About the Productions">
+         <textFill>
+            <RadialGradient centerX="0.5055555555555555" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#ecf2ec" />
+                  <Stop color="#d1a108" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="408.0" prefHeight="28.0" prefWidth="198.0" text="Concider About Reject Orders">
+         <textFill>
+            <RadialGradient centerX="0.5055555555555555" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#ecf2ec" />
+                  <Stop color="#d1a108" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="445.0" prefHeight="28.0" prefWidth="155.0" text="Reversing Productions ">
+         <textFill>
+            <RadialGradient centerX="0.5055555555555555" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#ecf2ec" />
+                  <Stop color="#d1a108" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="609.0" prefHeight="28.0" prefWidth="155.0" text="Search About the Stock">
+         <textFill>
+            <RadialGradient centerX="0.5055555555555555" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#ecf2ec" />
+                  <Stop color="#d1a108" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="655.0" prefHeight="28.0" prefWidth="234.0" text="View Invoices,Bills,Monthly Reports">
+         <textFill>
+            <RadialGradient centerX="0.5055555555555555" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#ecf2ec" />
+                  <Stop color="#d1a108" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

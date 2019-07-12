@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="660.0" prefWidth="680.0" style="-fx-border-color: red; -fx-border-width: 5;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.edu.ijse.sas.view.NewCompanyController">
+    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="596.0" layoutX="6.0" layoutY="58.0" opacity="0.88" stroke="BLACK" strokeType="INSIDE" style="-fx-font-size: 12pt;" width="668.0">
+         <fill>
+            <RadialGradient centerX="0.5277777777777777" centerY="0.49523809523809514" focusAngle="74.05" focusDistance="0.2325581395348837" radius="0.6976744186046513">
+               <stops>
+                  <Stop color="#091beb" />
+                  <Stop color="#565b56" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Rectangle>
+      <Label alignment="TOP_LEFT" layoutX="9.0" layoutY="6.0" prefHeight="39.0" prefWidth="382.0" text="Introduce New Company" textFill="#0000008c">
+         <font>
+            <Font name="Yu Gothic Medium" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="81.0" prefHeight="39.0" prefWidth="91.0" text="Name" textFill="#f0f806">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtName" focusColor="BLACK" layoutX="142.0" layoutY="81.0" onAction="#txtNameOnAction" prefHeight="33.0" prefWidth="500.0" promptText="Mention the Company Name" style="-fx-text-inner-color: white; -fx-font-size: 10pt;" unFocusColor="#0eda26" />
+      <Label layoutX="14.0" layoutY="173.0" prefHeight="39.0" prefWidth="105.0" text=" No" textFill="#f0f806">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtAdNo" focusColor="BLACK" layoutX="142.0" layoutY="180.0" onAction="#txtNoOnAction" prefHeight="33.0" prefWidth="217.0" promptText="No" style="-fx-text-inner-color: white; -fx-font-size: 10pt;" unFocusColor="#0eda26" />
+      <Label layoutX="14.0" layoutY="218.0" prefHeight="39.0" prefWidth="116.0" text="Lane" textFill="#f0f806">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtAdLane" focusColor="BLACK" layoutX="142.0" layoutY="225.0" onAction="#txtLaneOnAction" prefHeight="33.0" prefWidth="500.0" promptText="Lane" style="-fx-text-inner-color: white; -fx-font-size: 10pt;" unFocusColor="#0eda26" />
+      <Label layoutX="14.0" layoutY="263.0" prefHeight="39.0" prefWidth="116.0" text=" Area" textFill="#f0f806">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtAdArea" focusColor="BLACK" layoutX="142.0" layoutY="270.0" onAction="#txtAreaOnAction" prefHeight="33.0" prefWidth="500.0" promptText="Area" style="-fx-text-inner-color: white; -fx-font-size: 10pt;" unFocusColor="#0eda26" />
+      <Label layoutX="14.0" layoutY="308.0" prefHeight="39.0" prefWidth="116.0" text=" City" textFill="#f0f806">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtAdCity" focusColor="BLACK" layoutX="142.0" layoutY="315.0" onAction="#txtCityOnAction" prefHeight="33.0" prefWidth="500.0" promptText="City" style="-fx-text-inner-color: white; -fx-font-size: 10pt;" unFocusColor="#0eda26" />
+      <Label layoutX="14.0" layoutY="388.0" prefHeight="39.0" prefWidth="116.0" text="Email Address" textFill="#f0f806">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtMail" focusColor="BLACK" layoutX="142.0" layoutY="388.0" onAction="#txtMailOnAction" onKeyReleased="#txtEmailKeyReleased" prefHeight="33.0" prefWidth="356.0" promptText="Email" style="-fx-text-inner-color: white; -fx-font-size: 10pt;" unFocusColor="#0eda26" />
+      <Label layoutX="14.0" layoutY="433.0" prefHeight="39.0" prefWidth="116.0" text="Telephone" textFill="#f0f806">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtTel" focusColor="BLACK" layoutX="142.0" layoutY="433.0" onAction="#txtTelOnAction" prefHeight="33.0" prefWidth="356.0" promptText="Telephone No" style="-fx-text-inner-color: white; -fx-font-size: 10pt;" unFocusColor="#0eda26" />
+      <Label layoutX="14.0" layoutY="532.0" prefHeight="39.0" prefWidth="116.0" text="Fax" textFill="#f0f806">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtFax" focusColor="BLACK" layoutX="142.0" layoutY="532.0" prefHeight="33.0" prefWidth="356.0" promptText="Fax No" style="-fx-text-inner-color: white; -fx-font-size: 10pt;" unFocusColor="#0eda26" />
+      <Separator layoutX="19.0" layoutY="161.0" prefWidth="200.0" />
+      <Label layoutX="21.0" layoutY="131.0" prefHeight="33.0" prefWidth="91.0" text="Address" textFill="#07f1f7">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Separator layoutX="19.0" layoutY="381.0" prefWidth="200.0" />
+      <JFXButton fx:id="btnRegister" buttonType="RAISED" layoutX="460.0" layoutY="605.0" onAction="#registerBtnOnAction" prefHeight="39.0" prefWidth="84.0" style="-fx-background-color: #15e302; -fx-background-radius: 12;" text="REGISTER" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="btnCancel" buttonType="RAISED" layoutX="576.0" layoutY="605.0" onAction="#cancelBtnOnAction" prefHeight="39.0" prefWidth="84.0" style="-fx-background-color: gray; -fx-background-radius: 12;" text="CANCEL" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXListView fx:id="lstVw" layoutX="505.0" layoutY="423.0" prefHeight="118.0" prefWidth="167.0" visible="false" />
+      <JFXTextField fx:id="txtAddTel" focusColor="BLACK" layoutX="142.0" layoutY="483.0" onAction="#txtAddTelOnAction" prefHeight="33.0" prefWidth="356.0" promptText="Additional Telephone No" style="-fx-text-inner-color: white; -fx-font-size: 10pt;" unFocusColor="#0eda26" />
+      <Label layoutX="455.0" layoutY="10.0" prefHeight="39.0" prefWidth="91.0" text="CompanyID">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtId" editable="false" layoutX="546.0" layoutY="12.0" prefHeight="33.0" prefWidth="124.0" style="-fx-font-size: 10pt;" />
+   </children>
+</AnchorPane>

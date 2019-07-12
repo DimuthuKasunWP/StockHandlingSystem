@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="thisPane" prefHeight="700.0" prefWidth="300.0" style="-fx-background-color: #42426F;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.edu.ijse.sas.view.ProductionMenuController">
+    <children>
+      <Label layoutX="6.0" layoutY="-2.0" prefHeight="46.0" prefWidth="282.0" text="Production Menu">
+         <font>
+            <Font name="Segoe Print" size="25.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.4777777777777778" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#d70b0b" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <effect>
+            <DropShadow radius="8.5175" spread="0.2" width="15.07" />
+         </effect>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="411.0" layoutX="6.0" layoutY="235.0" opacity="0.66" stroke="BLACK" strokeType="INSIDE" style="-fx-background-radius: 30;" width="288.0">
+         <fill>
+            <RadialGradient centerX="0.4388888888888889" centerY="0.5" radius="0.5813953488372093">
+               <stops>
+                  <Stop color="#031401" />
+                  <Stop color="#031401" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Rectangle>
+      <Label fx:id="lblAdd" layoutX="109.0" layoutY="288.0" onMouseClicked="#lblAddProOnClicked" prefHeight="76.0" prefWidth="169.0" text=" Add Production">
+         <textFill>
+            <RadialGradient centerX="0.5055555555555555" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#ecf2ec" />
+                  <Stop color="#d1a108" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblOrder" layoutX="105.0" layoutY="413.0" onMouseClicked="#lblOrderProOnClicked" prefHeight="76.0" prefWidth="178.0" text=" Order Production">
+         <textFill>
+            <RadialGradient centerX="0.5055555555555555" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#ecf2ec" />
+                  <Stop color="#d1a108" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCurrent" layoutX="99.0" layoutY="530.0" onMouseClicked="#lblCurrentProOnClicked" prefHeight="76.0" prefWidth="190.0" text="  Current Production">
+         <textFill>
+            <RadialGradient centerX="0.5055555555555555" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#ecf2ec" />
+                  <Stop color="#d1a108" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="clickPane" layoutX="7.0" layoutY="76.0" prefHeight="150.0" prefWidth="282.0" style="-fx-background-color: black;">
+         <children>
+            <Label prefHeight="46.0" prefWidth="282.0" text="    Whats Wrong? Hard To Find Some Thing..." textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="proSearchBtn" buttonType="RAISED" layoutX="10.0" layoutY="95.0" prefHeight="36.0" prefWidth="78.0" style="-fx-background-color: red;" text="Production" textFill="WHITE" />
+            <Label layoutX="30.0" layoutY="39.0" prefHeight="36.0" prefWidth="98.0" text="Click Here..." textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="108.0" layoutY="34.0" prefHeight="46.0" prefWidth="178.0" text="And Type Your Own Words" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="comSearchBtn" buttonType="RAISED" layoutX="104.0" layoutY="95.0" prefHeight="36.0" prefWidth="78.0" style="-fx-background-color: red;" text="Company" textFill="WHITE" />
+            <JFXButton fx:id="comSearchBtn1" buttonType="RAISED" layoutX="198.0" layoutY="96.0" prefHeight="36.0" prefWidth="78.0" style="-fx-background-color: red;" text="Material" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="backBtn" buttonType="RAISED" layoutX="8.0" layoutY="653.0" onAction="#backBtnOnAction" prefHeight="37.0" prefWidth="123.0" ripplerFill="BLACK" style="-fx-background-color: gray;" text="Back [Esc]">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="76.0" fitWidth="78.0" layoutX="18.0" layoutY="287.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resource/icon/shopping_cart_add.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="76.0" fitWidth="78.0" layoutX="19.0" layoutY="413.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resource/icon/order-icon-21627.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="76.0" fitWidth="78.0" layoutX="19.0" layoutY="531.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resource/icon/badge-critical-charts.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblAdd1" layoutX="111.0" layoutY="334.0" onMouseClicked="#lblAddProOnClicked" prefHeight="36.0" prefWidth="42.0" text="[1]">
+         <textFill>
+            <RadialGradient centerX="0.5055555555555555" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#ecf2ec" />
+                  <Stop color="#d1a108" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblAdd11" layoutX="111.0" layoutY="579.0" onMouseClicked="#lblAddProOnClicked" prefHeight="36.0" prefWidth="42.0" text="[3]">
+         <textFill>
+            <RadialGradient centerX="0.5055555555555555" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#ecf2ec" />
+                  <Stop color="#d1a108" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblAdd12" layoutX="111.0" layoutY="461.0" onMouseClicked="#lblAddProOnClicked" prefHeight="36.0" prefWidth="42.0" text="[2]">
+         <textFill>
+            <RadialGradient centerX="0.5055555555555555" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#ecf2ec" />
+                  <Stop color="#d1a108" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

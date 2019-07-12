@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label prefHeight="84.0" prefWidth="594.0" text="STOCK HANDLING">
+         <font>
+            <Font name="Segoe MDL2 Assets" size="70.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.4444444444444444" centerY="0.5333333333333333" radius="0.5">
+               <stops>
+                  <Stop color="#f5ef00" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+   </children>
+</StackPane>

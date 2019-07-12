@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="thisPane" prefHeight="660.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.edu.ijse.sas.view.SelectionPageController">
+    <children>
+      <ImageView fitHeight="610.0" fitWidth="680.0" opacity="0.17" pickOnBounds="true">
+         <image>
+            <Image url="@../resource/image/abstract-lines-1366x768.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblMaterial" layoutX="106.0" layoutY="162.0" onMouseClicked="#lblMatOnMouseClicked" prefHeight="72.0" prefWidth="224.0" style="-fx-background-color: #0b80d8;" text="             Materials      [F5]" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="79.0" fitWidth="94.0" layoutX="6.0" layoutY="164.0" pickOnBounds="true">
+         <image>
+            <Image url="@../resource/icon/packing_boxes.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblProduction" layoutX="433.0" layoutY="118.0" onMouseClicked="#lblProOnMouseClicked" prefHeight="72.0" prefWidth="231.0" style="-fx-background-color: #0b80d8;" text="           Productions    [F1]" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" alignment="CENTER" layoutX="17.0" layoutY="35.0" prefHeight="123.0" prefWidth="155.0" style="-fx-background-color: #0b80d8;" text="              Time" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI" size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDisplayTime" layoutX="27.0" layoutY="109.0" prefHeight="45.0" prefWidth="136.0" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" alignment="CENTER" layoutX="177.0" layoutY="35.0" prefHeight="123.0" prefWidth="155.0" style="-fx-background-color: #0b80d8;" text="              Date" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="72.0" fitWidth="87.0" layoutX="179.0" layoutY="32.0" pickOnBounds="true">
+         <image>
+            <Image url="@../resource/icon/Calendar-PNG-HD.png" />
+         </image></ImageView>
+      <Label fx:id="lblDay" layoutX="201.0" layoutY="114.0" prefHeight="43.0" prefWidth="44.0" text="12" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblReport" layoutX="433.0" layoutY="194.0" onMouseClicked="#lblReportsOnClicked" prefHeight="72.0" prefWidth="231.0" style="-fx-background-color: #f2804b;" text="            Reports          [F2]" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="79.0" fitWidth="87.0" layoutX="346.0" layoutY="192.0" pickOnBounds="true">
+         <image>
+            <Image url="@../resource/icon/14-ways-to-earn-money-with-free-reports-to-the-last-detail-small-EqWMPw-clipart.png" />
+         </image></ImageView>
+      <ImageView fitHeight="87.0" fitWidth="77.0" layoutX="353.0" layoutY="109.0" pickOnBounds="true">
+         <image>
+            <Image url="@../resource/icon/grote-aantallen.png" />
+         </image></ImageView>
+      <Label fx:id="lblDayName" layoutX="190.0" layoutY="102.0" prefHeight="26.0" prefWidth="87.0" text="Saturday" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="87.0" fitWidth="87.0" layoutX="27.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resource/icon/Time.png" />
+         </image></ImageView>
+      <Label fx:id="lblRejReverse" layoutX="106.0" layoutY="238.0" onMouseClicked="#lblRejRecOnClicked" prefHeight="87.0" prefWidth="224.0" style="-fx-background-color: #7b2b9d;" text="   Reject and Reverse [F6]" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="55.0" fitWidth="72.0" layoutX="16.0" layoutY="254.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resource/icon/Cancel.png" />
+         </image></ImageView>
+      <Label fx:id="lblDocument" layoutX="433.0" layoutY="270.0" onMouseClicked="#lblDocumentOnClicked" prefHeight="72.0" prefWidth="231.0" style="-fx-background-color: #f2804b;" text="             Documents     [F3]" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI" size="19.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#221d1d" height="198.0" layoutX="14.0" layoutY="448.0" opacity="0.94" stroke="BLACK" strokeType="INSIDE" width="651.0" />
+      <Label layoutX="22.0" layoutY="448.0" prefHeight="24.0" prefWidth="144.0" text="Notifications" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <JFXTextArea fx:id="txtarNotify" editable="false" focusColor="#10a2b9" layoutX="49.0" layoutY="492.0" prefHeight="130.0" prefWidth="581.0" style="-fx-text-inner-color: #15e302; -fx-font-size: 13pt;" unFocusColor="#c3ff00" />
+      <ImageView fitHeight="79.0" fitWidth="77.0" layoutX="353.0" layoutY="268.0" pickOnBounds="true">
+         <image>
+            <Image url="@../resource/icon/folder-documents-icon.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblSearch" layoutX="105.0" layoutY="328.0" onMouseClicked="#lblSearchOnClicked" prefHeight="97.0" prefWidth="224.0" style="-fx-background-color: #7b2b9d;" text="   Search                    [F7]" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="79.0" fitWidth="77.0" layoutX="15.0" layoutY="341.0" pickOnBounds="true">
+         <image>
+            <Image url="@../resource/icon/chart-search.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblMonthName" layoutX="255.0" layoutY="124.0" prefHeight="26.0" prefWidth="77.0" text="December" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblSearch1" layoutX="433.0" layoutY="346.0" onMouseClicked="#lblUpdateOnClicked" prefHeight="79.0" prefWidth="231.0" style="-fx-background-color: #f2804b;" text="             Updates        [F4]" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCount" alignment="CENTER" layoutX="634.0" layoutY="429.0" prefHeight="38.0" prefWidth="44.0" style="-fx-background-color: red; -fx-background-radius: 20;" textAlignment="RIGHT" textFill="WHITE" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblAdmin" layoutX="433.0" layoutY="35.0" onMouseClicked="#lblAdminOnMouseClicked" prefHeight="79.0" prefWidth="231.0" style="-fx-background-color: #0b80d8;" text="              Admin   [Home]" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="79.0" fitWidth="87.0" layoutX="341.0" layoutY="346.0" pickOnBounds="true">
+         <image>
+            <Image url="@../resource/icon/agt_update_drivers.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="72.0" fitWidth="77.0" layoutX="346.0" layoutY="27.0" pickOnBounds="true">
+         <image>
+            <Image url="@../resource/icon/admin_icon.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

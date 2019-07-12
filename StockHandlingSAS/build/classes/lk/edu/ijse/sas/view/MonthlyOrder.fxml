@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="299.0" prefWidth="500.0" style="-fx-border-color: red; -fx-border-width: 5;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.edu.ijse.sas.view.MonthlyOrderController">
+    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="236.0" layoutX="8.0" layoutY="60.0" opacity="0.88" stroke="BLACK" strokeType="INSIDE" style="-fx-font-size: 12pt;" width="487.0">
+         <fill>
+            <RadialGradient centerX="0.5277777777777777" centerY="0.49523809523809514" focusAngle="74.05" focusDistance="0.2325581395348837" radius="0.6976744186046513">
+               <stops>
+                  <Stop color="#091beb" />
+                  <Stop color="#565b56" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Rectangle>
+      <Label layoutX="14.0" layoutY="87.0" prefHeight="39.0" prefWidth="46.0" text="Year" textFill="#e8d508">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnView" buttonType="RAISED" layoutX="399.0" layoutY="254.0" onAction="#btnViewOnAction" prefHeight="37.0" prefWidth="88.0" ripplerFill="#f6f7f8" style="-fx-background-color: #15e302; -fx-background-radius: 12;" text="View" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <Label alignment="TOP_CENTER" layoutX="6.0" layoutY="8.0" prefHeight="39.0" prefWidth="321.0" text="Monthly Orders Report" textFill="#0000008c">
+         <font>
+            <Font name="Yu Gothic Medium" size="30.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbYear" focusColor="BLACK" layoutX="91.0" layoutY="74.0" prefHeight="37.0" prefWidth="169.0" promptText="Select Year" style="-fx-text-base-color: white; -fx-font-size: 10pt;" unFocusColor="#00ff1a" />
+      <Label layoutX="14.0" layoutY="134.0" prefHeight="39.0" prefWidth="59.0" text="Month" textFill="#e8d508">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbMonth" focusColor="BLACK" layoutX="91.0" layoutY="127.0" prefHeight="37.0" prefWidth="169.0" promptText="Select Month" style="-fx-text-base-color: white; -fx-font-size: 10pt;" unFocusColor="#00ff1a" />
+   </children>
+</AnchorPane>

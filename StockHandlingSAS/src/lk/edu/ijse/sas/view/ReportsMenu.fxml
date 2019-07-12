@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="300.0" style="-fx-background-color: #42426F;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.edu.ijse.sas.view.ReportsMenuController">
+    <children>
+      <Label layoutX="9.0" layoutY="-4.0" prefHeight="46.0" prefWidth="282.0" text="Reports Menu">
+         <font>
+            <Font name="Segoe Print" size="25.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.4777777777777778" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#d70b0b" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <effect>
+            <DropShadow radius="8.5175" spread="0.2" width="15.07" />
+         </effect>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="553.0" layoutX="6.0" layoutY="75.0" opacity="0.66" stroke="BLACK" strokeType="INSIDE" style="-fx-background-radius: 30;" width="288.0">
+         <fill>
+            <RadialGradient centerX="0.4388888888888889" centerY="0.5" radius="0.5813953488372093">
+               <stops>
+                  <Stop color="#031401" />
+                  <Stop color="#031401" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Rectangle>
+      <Label fx:id="lblRecMat" layoutX="118.0" layoutY="115.0" onMouseClicked="#lblRecMatOnClicked" prefHeight="46.0" prefWidth="159.0" text="Monthly Receive ">
+         <textFill>
+            <RadialGradient centerX="0.5055555555555555" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#ecf2ec" />
+                  <Stop color="#d1a108" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnBack" buttonType="RAISED" layoutX="10.0" layoutY="653.0" onAction="#btnBackOnAction" prefHeight="36.0" prefWidth="98.0" ripplerFill="BLACK" style="-fx-background-color: gray;" text="Back">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="79.0" fitWidth="98.0" layoutX="14.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resource/icon/product-sales-report.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="79.0" fitWidth="98.0" layoutX="20.0" layoutY="259.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resource/icon/custom-reports.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="118.0" layoutY="143.0" prefHeight="30.0" prefWidth="159.0" text="Material">
+         <textFill>
+            <RadialGradient centerX="0.5055555555555555" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#ecf2ec" />
+                  <Stop color="#d1a108" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblPro" layoutX="120.0" layoutY="261.0" onMouseClicked="#lblProOnClicked" prefHeight="46.0" prefWidth="169.0" text="Monthly ">
+         <textFill>
+            <RadialGradient centerX="0.5055555555555555" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#ecf2ec" />
+                  <Stop color="#d1a108" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="120.0" layoutY="289.0" prefHeight="30.0" prefWidth="159.0" text="Productions">
+         <textFill>
+            <RadialGradient centerX="0.5055555555555555" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#ecf2ec" />
+                  <Stop color="#d1a108" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="79.0" fitWidth="98.0" layoutX="21.0" layoutY="402.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resource/icon/order-icon-21627.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblMonthlyOrders" layoutX="121.0" layoutY="402.0" onMouseClicked="#lblMonthlyOrdersOnClicked" prefHeight="46.0" prefWidth="169.0" text="Monthly ">
+         <textFill>
+            <RadialGradient centerX="0.5055555555555555" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#ecf2ec" />
+                  <Stop color="#d1a108" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="121.0" layoutY="434.0" prefHeight="30.0" prefWidth="159.0" text="Orders">
+         <textFill>
+            <RadialGradient centerX="0.5055555555555555" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#ecf2ec" />
+                  <Stop color="#d1a108" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="79.0" fitWidth="98.0" layoutX="26.0" layoutY="547.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resource/icon/order-icon-21627.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblReject" layoutX="126.0" layoutY="547.0" onMouseClicked="#lblRejectOnClicked" prefHeight="46.0" prefWidth="169.0" text="Reject Products">
+         <textFill>
+            <RadialGradient centerX="0.5055555555555555" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#ecf2ec" />
+                  <Stop color="#d1a108" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="46.0" fitWidth="70.0" layoutX="20.0" layoutY="533.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resource/icon/Cancel.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
