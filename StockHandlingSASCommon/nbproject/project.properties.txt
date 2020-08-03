@@ -4,7 +4,7 @@ annotation.processing.processor.options=
 annotation.processing.processors.list=
 annotation.processing.run.all.processors=true
 annotation.processing.source.output=${build.generated.sources.dir}/ap-source-output
-application.title=StockHandlingSASServer
+application.title=StockHandlingSASCommon
 application.vendor=dimuthu
 build.classes.dir=${build.dir}/classes
 build.classes.excludes=**/*.java,**/*.form
@@ -26,38 +26,16 @@ debug.test.classpath=\
     ${run.test.classpath}
 # This directory is removed when the project is cleaned:
 dist.dir=dist
-dist.jar=${dist.dir}/StockHandlingSASServer.jar
+dist.jar=${dist.dir}/StockHandlingSASCommon.jar
 dist.javadoc.dir=${dist.dir}/javadoc
 endorsed.classpath=
 excludes=
-file.reference.antlr-2.7.7.jar=C:\\Users\\dimuthu\\Documents\\Ijse\\Second Semester\\RMI\\Suranga Sir Final Date\\Today\\Connection Pool\\U-Hibernate 1\\IJSE - RMI - POS\\IJSE RMI POS - Server\\lib\\antlr-2.7.7.jar
-file.reference.classmate-1.3.0.jar=C:\\Users\\dimuthu\\Documents\\Ijse\\Second Semester\\RMI\\Suranga Sir Final Date\\Today\\Connection Pool\\U-Hibernate 1\\IJSE - RMI - POS\\IJSE RMI POS - Server\\lib\\classmate-1.3.0.jar
-file.reference.dom4j-1.6.1.jar=C:\\Users\\dimuthu\\Documents\\Ijse\\Second Semester\\RMI\\Suranga Sir Final Date\\Today\\Connection Pool\\U-Hibernate 1\\IJSE - RMI - POS\\IJSE RMI POS - Server\\lib\\dom4j-1.6.1.jar
-file.reference.hibernate-commons-annotations-5.0.1.Final.jar=C:\\Users\\dimuthu\\Documents\\Ijse\\Second Semester\\RMI\\Suranga Sir Final Date\\Today\\Connection Pool\\U-Hibernate 1\\IJSE - RMI - POS\\IJSE RMI POS - Server\\lib\\hibernate-commons-annotations-5.0.1.Final.jar
-file.reference.hibernate-core-5.2.12.Final.jar=C:\\Users\\dimuthu\\Documents\\Ijse\\Second Semester\\RMI\\Suranga Sir Final Date\\Today\\Connection Pool\\U-Hibernate 1\\IJSE - RMI - POS\\IJSE RMI POS - Server\\lib\\hibernate-core-5.2.12.Final.jar
-file.reference.hibernate-jpa-2.1-api-1.0.0.Final.jar=C:\\Users\\dimuthu\\Documents\\Ijse\\Second Semester\\RMI\\Suranga Sir Final Date\\Today\\Connection Pool\\U-Hibernate 1\\IJSE - RMI - POS\\IJSE RMI POS - Server\\lib\\hibernate-jpa-2.1-api-1.0.0.Final.jar
-file.reference.jandex-2.0.3.Final.jar=C:\\Users\\dimuthu\\Documents\\Ijse\\Second Semester\\RMI\\Suranga Sir Final Date\\Today\\Connection Pool\\U-Hibernate 1\\IJSE - RMI - POS\\IJSE RMI POS - Server\\lib\\jandex-2.0.3.Final.jar
-file.reference.javassist-3.20.0-GA.jar=C:\\Users\\dimuthu\\Documents\\Ijse\\Second Semester\\RMI\\Suranga Sir Final Date\\Today\\Connection Pool\\U-Hibernate 1\\IJSE - RMI - POS\\IJSE RMI POS - Server\\lib\\javassist-3.20.0-GA.jar
-file.reference.jboss-logging-3.3.0.Final.jar=C:\\Users\\dimuthu\\Documents\\Ijse\\Second Semester\\RMI\\Suranga Sir Final Date\\Today\\Connection Pool\\U-Hibernate 1\\IJSE - RMI - POS\\IJSE RMI POS - Server\\lib\\jboss-logging-3.3.0.Final.jar
-file.reference.jboss-transaction-api_1.2_spec-1.0.1.Final.jar=C:\\Users\\dimuthu\\Documents\\Ijse\\Second Semester\\RMI\\Suranga Sir Final Date\\Today\\Connection Pool\\U-Hibernate 1\\IJSE - RMI - POS\\IJSE RMI POS - Server\\lib\\jboss-transaction-api_1.2_spec-1.0.1.Final.jar
 includes=**
 # Non-JavaFX jar file creation is deactivated in JavaFX 2.0+ projects
 jar.archive.disabled=true
 jar.compress=false
 javac.classpath=\
-    ${javafx.classpath.extension}:\
-    ${libs.MySQLDriver.classpath}:\
-    ${file.reference.antlr-2.7.7.jar}:\
-    ${file.reference.classmate-1.3.0.jar}:\
-    ${file.reference.dom4j-1.6.1.jar}:\
-    ${file.reference.hibernate-commons-annotations-5.0.1.Final.jar}:\
-    ${file.reference.hibernate-core-5.2.12.Final.jar}:\
-    ${file.reference.hibernate-jpa-2.1-api-1.0.0.Final.jar}:\
-    ${file.reference.jandex-2.0.3.Final.jar}:\
-    ${file.reference.javassist-3.20.0-GA.jar}:\
-    ${file.reference.jboss-logging-3.3.0.Final.jar}:\
-    ${file.reference.jboss-transaction-api_1.2_spec-1.0.1.Final.jar}:\
-    ${reference.StockHandlingSASCommon.jar}
+    ${javafx.classpath.extension}
 # Space-separated list of extra javac options
 javac.compilerargs=
 javac.deprecation=false
@@ -100,7 +78,7 @@ javafx.enable.concurrent.external.runs=false
 javafx.enabled=true
 javafx.fallback.class=com.javafx.main.NoJavaFXFallback
 # Main class for JavaFX
-javafx.main.class=stockhandlingsascommon.StockHandlingSASCommon
+javafx.main.class=stockhandlingsascommom.StockHandlingSASCommom
 javafx.preloader.class=
 # This project does not use Preloader
 javafx.preloader.enabled=false
@@ -123,8 +101,6 @@ manifest.custom.permissions=
 manifest.file=manifest.mf
 meta.inf.dir=${src.dir}/META-INF
 platform.active=default_platform
-project.StockHandlingSASCommon=../StockHandlingSASCommom
-reference.StockHandlingSASCommon.jar=${project.StockHandlingSASCommon}/dist/StockHandlingSASCommon.jar
 run.classpath=\
     ${dist.jar}:\
     ${javac.classpath}:\
