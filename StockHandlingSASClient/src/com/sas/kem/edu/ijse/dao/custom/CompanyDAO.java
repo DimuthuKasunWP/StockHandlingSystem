@@ -12,7 +12,7 @@ import javafx.collections.ObservableList;
 
 /**
  *
- * @author Vidura
+ * @author dimuthu
  */
 public interface CompanyDAO extends SuperDAO<CompanyDTO>{
 

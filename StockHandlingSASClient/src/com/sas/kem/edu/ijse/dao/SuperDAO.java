@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Vidura
+ * @author dimuthu
  */
 public interface SuperDAO<T extends SuperDTO> {
     

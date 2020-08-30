@@ -10,7 +10,7 @@ import com.sas.kem.edu.ijse.dto.Reject_order_detailDTO;
 
 /**
  *
- * @author Vidura
+ * @author dimuthu
  */
 public interface Reject_order_detailDAO extends SuperDAO<Reject_order_detailDTO>{
     

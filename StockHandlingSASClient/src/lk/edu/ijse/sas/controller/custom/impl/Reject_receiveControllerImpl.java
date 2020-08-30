@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Vidura
+ * @author dimuthu
  */
 public class Reject_receiveControllerImpl implements Reject_receiveController{
 

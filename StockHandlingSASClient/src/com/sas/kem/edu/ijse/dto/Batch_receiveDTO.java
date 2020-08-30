@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 
 /**
  *
- * @author Vidura
+ * @author dimuthu
  */
 public class Batch_receiveDTO extends SuperDTO{
     

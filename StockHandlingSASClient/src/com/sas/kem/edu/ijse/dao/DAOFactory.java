@@ -31,7 +31,7 @@ import com.sas.kem.edu.ijse.dao.custom.impl.SectorDAOImpl;
 
 /**
  *
- * @author Vidura
+ * @author dimuthu
  */
 public class DAOFactory {
     

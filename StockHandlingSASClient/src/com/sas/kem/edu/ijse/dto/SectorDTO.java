@@ -7,7 +7,7 @@ package com.sas.kem.edu.ijse.dto;
 
 /**
  *
- * @author Vidura
+ * @author dimuthu
  */
 public class SectorDTO extends SuperDTO{
     

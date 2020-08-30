@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Vidura
+ * @author dimuthu
  */
 public interface QuaryDAO extends SuperDAO<SuperDTO>{
 

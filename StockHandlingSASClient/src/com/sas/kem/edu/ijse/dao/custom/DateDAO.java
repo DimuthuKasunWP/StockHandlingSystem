@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Vidura
+ * @author dimuthu
  */
 public interface DateDAO extends SuperDAO<DateDTO>{
 

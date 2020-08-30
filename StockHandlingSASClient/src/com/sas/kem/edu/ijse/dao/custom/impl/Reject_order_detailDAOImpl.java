@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Vidura
+ * @author dimuthu
  */
 public class Reject_order_detailDAOImpl implements Reject_order_detailDAO{
 

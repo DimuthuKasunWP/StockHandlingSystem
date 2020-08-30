@@ -10,7 +10,7 @@ import com.sas.kem.edu.ijse.dto.Remove_receive_materialDTO;
 
 /**
  *
- * @author Vidura
+ * @author dimuthu
  */
 public interface Remove_receive_materialDAO extends SuperDAO<Remove_receive_materialDTO>{
     

@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 
 /**
  *
- * @author Vidura
+ * @author dimuthu
  */
 public class Reject_receiveDTO extends SuperDTO{
     

@@ -17,7 +17,7 @@ import lk.edu.ijse.sas.controller.custom.QueryController;
 
 /**
  *
- * @author Vidura
+ * @author dimuthu
  */
 public class QueryControllerImpl implements QueryController{
     

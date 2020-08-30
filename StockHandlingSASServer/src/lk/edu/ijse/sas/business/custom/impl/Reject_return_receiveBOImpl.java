@@ -14,7 +14,7 @@ import lk.edu.ijse.sas.dto.Reject_return_receiveDTO;
 
 /**
  *
- * @author Vidura
+ * @author dimuthu
  */
 public class Reject_return_receiveBOImpl implements Reject_return_receiveBO{
 

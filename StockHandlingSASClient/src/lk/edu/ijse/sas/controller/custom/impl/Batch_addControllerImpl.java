@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Vidura
+ * @author dimuthu
  */
 public class Batch_addControllerImpl implements Batch_addController{
     

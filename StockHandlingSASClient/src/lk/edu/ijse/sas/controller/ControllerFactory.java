@@ -28,7 +28,7 @@ import lk.edu.ijse.sas.controller.custom.impl.ValidationControllerImpl;
 
 /**
  *
- * @author Vidura
+ * @author dimuthu
  */
 public class ControllerFactory {
     

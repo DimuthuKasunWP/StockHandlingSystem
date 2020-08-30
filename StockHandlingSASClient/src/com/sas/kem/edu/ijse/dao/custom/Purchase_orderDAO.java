@@ -10,7 +10,7 @@ import com.sas.kem.edu.ijse.dto.Purchase_orderDTO;
 
 /**
  *
- * @author Vidura
+ * @author dimuthu
  */
 public interface Purchase_orderDAO extends SuperDAO<Purchase_orderDTO>{
     

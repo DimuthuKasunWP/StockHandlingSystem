@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Vidura
+ * @author dimuthu
  */
 public class SectorDAOImpl implements SectorDAO{
     

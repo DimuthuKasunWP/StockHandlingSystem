@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Vidura
+ * @author dimuthu
  */
 public class Return_batch_receiveDAOImpl implements Return_batch_receiveDAO{
 

@@ -10,7 +10,7 @@ import com.sas.kem.edu.ijse.dto.Return_batch_receiveDTO;
 
 /**
  *
- * @author Vidura
+ * @author dimuthu
  */
 public interface Return_batch_receiveDAO extends SuperDAO<Return_batch_receiveDTO>{
 

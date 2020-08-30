@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Vidura
+ * @author dimuthu
  */
 public class Return_batch_receiveControllerImpl implements Return_batch_receiveController{
 

@@ -18,7 +18,7 @@ import javafx.collections.ObservableList;
 
 /**
  *
- * @author Vidura
+ * @author dimuthu
  */
 public class ProductDAOImpl implements ProductDAO {
     

@@ -24,7 +24,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Vidura
+ * @author dimuthu
  */
 public class Batch_receiveControllerImpl implements Batch_receiveController{
     

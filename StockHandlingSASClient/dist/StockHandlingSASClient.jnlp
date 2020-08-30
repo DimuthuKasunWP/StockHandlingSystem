@@ -2,7 +2,7 @@
 <jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="StockHandlingSASClient.jnlp">
   <information>
     <title>StockHandlingSASClient</title>
-    <vendor>Vidura</vendor>
+    <vendor>dimuthu</vendor>
     <description>null</description>
     <offline-allowed/>
   </information>

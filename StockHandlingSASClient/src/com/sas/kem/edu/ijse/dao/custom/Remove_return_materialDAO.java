@@ -10,7 +10,7 @@ import com.sas.kem.edu.ijse.dto.Remove_return_materialDTO;
 
 /**
  *
- * @author Vidura
+ * @author dimuthu
  */
 public interface Remove_return_materialDAO extends SuperDAO<Remove_return_materialDTO>{
     

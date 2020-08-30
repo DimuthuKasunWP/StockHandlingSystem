@@ -14,7 +14,7 @@ import java.sql.Statement;
 
 /**
  *
- * @author Vidura
+ * @author dimuthu
  */
 public class DateDAOImpl implements DateDAO{
 

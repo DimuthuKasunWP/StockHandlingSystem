@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 
 /**
  *
- * @author Vidura
+ * @author dimuthu
  */
 public class Product_orderDTO extends SuperDTO{
     

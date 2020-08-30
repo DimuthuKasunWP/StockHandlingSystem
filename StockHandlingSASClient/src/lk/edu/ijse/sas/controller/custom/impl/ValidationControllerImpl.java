@@ -9,7 +9,7 @@ import lk.edu.ijse.sas.controller.custom.ValidationController;
 
 /**
  *
- * @author Vidura
+ * @author dimuthu
  */
 public class ValidationControllerImpl implements ValidationController{
 

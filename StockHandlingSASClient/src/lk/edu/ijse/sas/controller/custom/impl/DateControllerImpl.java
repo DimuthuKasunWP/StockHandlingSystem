@@ -12,7 +12,7 @@ import com.sas.kem.edu.ijse.dto.DateDTO;
 
 /**
  *
- * @author Vidura
+ * @author dimuthu
  */
 public class DateControllerImpl implements DateController{
     

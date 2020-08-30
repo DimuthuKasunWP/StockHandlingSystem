@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Vidura
+ * @author dimuthu
  */
 public class Reject_return_receiveDAOImpl implements Reject_return_receiveDAO{
 

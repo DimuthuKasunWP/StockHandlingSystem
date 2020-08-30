@@ -10,7 +10,7 @@ import com.sas.kem.edu.ijse.dto.Return_order_detailDTO;
 
 /**
  *
- * @author Vidura
+ * @author dimuthu
  */
 public interface Return_order_detailDAO extends SuperDAO<Return_order_detailDTO>{
 

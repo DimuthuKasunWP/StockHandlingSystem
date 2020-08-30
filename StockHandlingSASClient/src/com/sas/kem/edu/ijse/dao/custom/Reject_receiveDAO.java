@@ -10,7 +10,7 @@ import com.sas.kem.edu.ijse.dto.Reject_receiveDTO;
 
 /**
  *
- * @author Vidura
+ * @author dimuthu
  */
 public interface Reject_receiveDAO extends SuperDAO<Reject_receiveDTO>{
     
